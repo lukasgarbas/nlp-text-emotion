@@ -1,10 +1,8 @@
 # Emotion Classification in Short Messages
 
-Multi-class sentiment analysis problem to classify text into five emotions categories: joy, sadness, anger, fear, neutral. A fun weekend project to go through different text classification techniques. This includes dataset preparation, traditional machine learning with scikit-learn, LSTM neural networks and transfer learning using BERT (tensorflow's keras).
+Multi-class sentiment analysis problem to classify texts into five emotion categories: joy, sadness, anger, fear, neutral. A fun weekend project to go through different text classification techniques. This includes dataset preparation, traditional machine learning with scikit-learn, LSTM neural networks and transfer learning using BERT (tensorflow keras).
 
 # Datasets
-
-## Datasets overview
 
 **Summary Table**
 
@@ -19,7 +17,7 @@ links: [dailydialog](http://yanran.li/dailydialog.html), [emotion-stimulus](http
 
 ## Combined dataset
 
-Dataset was combined from dailydialog, isear, and emotion-stimulus to create a balanced dataset with 6 labels: joy, sad, anger, fear, disgust, surprise and neutral. The texts mainly consist of short messages and dialog utterances.
+Dataset was combined from dailydialog, isear, and emotion-stimulus to create a balanced dataset with 5 labels: joy, sad, anger, fear, and neutral. The texts mainly consist of short messages and dialog utterances.
 
 # Experiments
 
@@ -38,16 +36,17 @@ Dataset was combined from dailydialog, isear, and emotion-stimulus to create a b
 ### Neural Networks
 * Data preprocessing: noise and punctuation removal, tokenization
 * Word Embeddings: pretrained 300 dimensional word2vec ([link](https://fasttext.cc/docs/en/english-vectors.html))
-* Deep Network: LSTM and biLSTM
+* Deep Network: LSTM, biLSTM, CNN 
 
 | Approach            | F1-Score |
 | :------------------ | :------: |
 | LSTM + w2v_wiki     | 0.7395   |
 | biLSTM + w2v_wiki   | 0.7414   |
+| CNN + w2v_wiki      | 0.7580   |
 
 ### Transfer learning with BERT
-Fine-tuning BERT for text classification
+Finetuning BERT for text classification
 
 | Approach            | F1-Score |
 | :------------------ | :------: |
-| fine-tuned BERT     | 0.8320   |
+| finetuned BERT      | 0.8320   |
